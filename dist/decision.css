@@ -1,0 +1,43 @@
+#idea-explainer{border-top:1px solid var(--line);padding:30px 0 38px;margin-bottom:22px}#idea-explainer h2{font-size:clamp(22px,2.5vw,34px);margin:10px 0 24px}#idea-explainer ol{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;list-style:none;padding:0;margin:0}#idea-explainer li{border-inline-start:2px solid #b3c7af;padding-inline-start:20px}#idea-explainer li>b{font:16px monospace;color:#687e6c}#idea-explainer h3{font-size:20px;margin:12px 0}#idea-explainer p{font-size:15px;line-height:1.9;color:#53665c;margin:0}#decision-live{margin:24px 0;background:#10272b;color:#e4eee5;padding:28px;scroll-margin-top:20px}.decision-head{display:flex;justify-content:space-between;align-items:center;gap:20px}.decision-head .eyebrow{color:#a8c0aa}.decision-head h2{font-size:26px;margin:8px 0 18px}#watch-priority{border:1px solid #d6b480;background:#ead3ac;color:#18322b;padding:12px 18px;font:inherit;cursor:pointer}#live-command{border-inline-start:4px solid #a8cd93;padding:14px 20px;background:#203a39;font-size:18px;line-height:1.8}#live-command[data-phase=amber]{border-color:#e2bc76}#live-command[data-phase=clearance]{border-color:#df8f83}#priority-timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#3c5350;margin-top:20px}#priority-timeline[hidden]{display:none}#priority-timeline>div{background:#152e30;padding:15px 10px;color:#92a8a0}#priority-timeline .reached{background:#28463d;color:#e0edcb}#priority-timeline span{font-size:13px;display:block}#priority-timeline b{font:20px monospace;display:block;margin-top:8px}.decision-columns{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:22px}.decision-columns h3{font-size:18px}.decision-columns p{font-size:13px;line-height:1.8}.decision-method{color:#a8bdb3}.candidate-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.candidate-options>div{padding:16px;border:1px solid #526963}.candidate-options .chosen{border-color:#bbd69d;background:#284338}.candidate-options b{font:30px monospace;display:block;margin:12px 0}.candidate-options small{color:#b6cbb7}#decision-tradeoff dl{margin:0}#decision-tradeoff dl>div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #405650;padding:10px 0;font-size:14px}#decision-tradeoff dd{margin:0;direction:ltr;font-family:monospace}#decision-tradeoff strong{display:block;color:#bbdbab;font-size:15px}#decision-tradeoff .loss{color:#f0b0a1}.tradeoff-warning{padding:12px;background:#563c35;color:#ffe0ca}.tradeoff-note{color:#afc1b6}#live-event-log p{border-bottom:1px solid #304a46;padding-bottom:7px}#live-event-log b{display:inline-block;min-width:60px;margin-inline-end:10px;color:#d4d8ab}.insights-row .decision-panel{display:none}.insights-row{grid-template-columns:1fr}.map-note{max-width:80%;font-size:11px}.sc-upload{display:block}button:focus-visible{outline:3px solid #cb9555;outline-offset:3px}@media(max-width:760px){#idea-explainer ol,.decision-columns{grid-template-columns:1fr;gap:22px}#decision-live{padding:18px}.decision-head{display:block}#watch-priority{margin-bottom:18px;width:100%}#priority-timeline{grid-template-columns:repeat(2,1fr)}#priority-timeline>div:last-child{grid-column:1/-1}#decision-tradeoff dl>div{flex-wrap:wrap}.map-note{font-size:9px;line-height:1.4;max-width:75%}}
+
+.map-playback-state{position:absolute;inset:0 0 auto;z-index:4;padding:10px 14px;text-align:center;background:#ece4c9f0;color:#263d34;font-size:13px;font-weight:600;pointer-events:none}.map-playback-state[hidden]{display:none}.map-wrap:has(.map-playback-state:not([hidden])) .signal-status{top:49px}#junction-phases{display:grid;grid-template-columns:repeat(4,1fr);background:#11282b;gap:1px;border-top:1px solid #344c43}#junction-phases span{font-size:11px;color:#a0b5a5;padding:12px 9px;text-align:center;line-height:1.7}#junction-phases .current{background:#2d493d;color:#e0eec9}.signal-status{max-width:75%;font-size:11px}.map-note{display:none}.sc-fields [hidden],.sc-panel label[hidden]{display:none!important}.sc-assumptions{margin:14px 0}.sc-assumptions summary{padding:10px 0;font-size:13px;color:#456453}.sc-assumptions .sc-fields{margin-top:12px}.sc-scene{padding:20px}.sc-scene svg{background:#14292c}.sc-scene #sc-beacon[data-state=red]{filter:drop-shadow(0 0 5px #fa7d6d88)}.sc-scene #sc-beacon[data-state=green]{filter:drop-shadow(0 0 5px #a9d78f88)}@media(max-width:760px){#junction-phases{grid-template-columns:1fr 1fr}.map-playback-state{font-size:11px;padding:8px}.signal-status{font-size:9px}.sc-scene{padding:12px}.sc-layout{display:flex;flex-direction:column-reverse}}
+
+#junction-phases[data-phase=paused] .current{background:#35423b;color:#c5cfc1}#junction-phases[data-phase=amber] .current{background:#5d5030;color:#f1d291}#junction-phases[data-phase=clearance] .current{background:#503b35;color:#f1bbb1}
+
+/* Reserve both the phase name and status so signal transitions never resize the strip. */
+#junction-phases{align-items:stretch}
+#junction-phases .junction-phase{height:120px;min-width:0;padding:14px 9px;display:grid;grid-template-rows:48px 38px;align-content:center;gap:6px;text-align:center;color:#a0b5a5}
+#junction-phases .phase-name{font-size:12px;line-height:1.8;padding:0;display:flex;align-items:center;justify-content:center;color:inherit}
+#junction-phases .phase-state{font-size:11px;line-height:1.6;display:flex;align-items:center;justify-content:center;color:inherit}
+.candidate-options h4{font-size:15px;margin:0}
+.candidate-options .candidate-action{font-size:12px;line-height:1.6;min-height:58px;margin:8px 0;color:#b6cbb7}
+.candidate-cost-label{font-size:11px;color:#b6cbb7;display:block}
+.candidate-options .candidate-score{font:30px monospace;margin:5px 0}
+.candidate-options small{display:block;font-size:11px}
+.candidate-breakdown{border-top:1px solid #50675b;margin:15px 0 12px;padding-top:8px}
+.candidate-breakdown>div{display:flex;align-items:start;justify-content:space-between;gap:8px;font-size:11px;line-height:1.8;margin:7px 0}
+.candidate-breakdown dd{font:12px/1.8 monospace;white-space:nowrap;margin:0}
+.candidate-options .candidate-choice{border-top:1px solid #50675b;padding-top:10px;color:#d4e5bc}
+.candidate-guide{color:#d4e3d2}
+.candidate-difference{border-inline-start:2px solid #a9c596;padding-inline-start:12px}
+.comparison-panel #comparison-title{font-size:22px;font-weight:600;line-height:1.6}
+#comparison-context{white-space:normal;text-align:end}
+#comparison-metric{font-size:13px;color:var(--muted);margin:18px 0 0}
+.comparison-panel .bar-row{font-size:12px}
+.comparison-panel .bar-row>span{width:105px;font-size:12px}
+.comparison-panel .bar-row>b{width:65px;font-size:15px;text-align:end}
+#comparison-summary{margin-top:24px;padding:18px 20px;background:#e8eddf;border-inline-start:3px solid var(--green);font-size:14px;line-height:1.9}
+#comparison-summary strong{font-size:18px;font-weight:500}
+#comparison-summary p+p{font-size:12px;color:#53665c;margin-top:6px}
+#comparison-outcomes{margin-top:22px}
+.comparison-table-head,.comparison-outcome{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
+.comparison-table-head{font-size:11px;color:var(--muted);padding:0 0 12px}
+.comparison-outcome h4{font-size:14px;font-weight:500;margin:0}
+.comparison-outcome p{font-size:11px;color:var(--muted);line-height:1.8;margin-top:5px}
+.comparison-pair{font-size:18px;white-space:nowrap}
+.comparison-pair small{display:block;font:11px/1.8 var(--font);color:var(--muted)}
+.comparison-delta{font-size:14px;font-weight:500}
+.comparison-delta small{display:block;font-size:12px;margin-top:4px}
+.comparison-delta.gain{color:#315f45}.comparison-delta.loss{color:#a64436}.comparison-delta.neutral{color:var(--muted)}
+#comparison-method{font-size:12px;line-height:1.9;margin-top:18px;max-width:980px}
+@media(max-width:760px){#junction-phases .junction-phase{height:120px}.comparison-panel .panel-heading{align-items:start;flex-direction:column}.comparison-panel #comparison-title{font-size:20px}#comparison-context{text-align:start}.comparison-table-head{display:none}.comparison-outcome{grid-template-columns:1fr 1fr;gap:12px}.comparison-outcome>div{grid-column:1/-1}.comparison-pair{font-size:17px}.comparison-delta{text-align:end}.candidate-options>div{padding:12px}.candidate-options{gap:8px}.candidate-breakdown>div{display:block}.candidate-options .candidate-action{min-height:76px}.comparison-panel .bar-row>span{width:92px;font-size:11px}.comparison-panel .bar-row>b{font-size:13px;width:60px}}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a20">
+  <meta name="description" content="FlowTwin AI — من مراقبة الازدحام إلى استباقه. مختبر تفاعلي لفكرة التوأم الرقمي المروري في نقلثون.">
+  <title>FlowTwin AI — مختبر الحركة</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./eco.css">
+  <link rel="stylesheet" href="./decision.css?v=results-explained-20261023-3">
+  <link rel="stylesheet" href="./safecross.css?v=results-explained-20261023-3">
+  <script src="./traffic-engine.js?v=results-explained-20261023-3" defer></script>
+  <script src="./intersection-map.js?v=results-explained-20261023-3" defer></script>
+  <script src="./app.js?v=results-explained-20261023-3" defer></script>
+  <script src="./decision-view.js?v=results-explained-20261023-3" defer></script>
+  <script src="./simulation-view.js?v=results-explained-20261023-3" defer></script>
+  <script src="./safecross-engine.js?v=results-explained-20261023-3" defer></script>
+  <script src="./safecross-view.js?v=results-explained-20261023-3" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">انتقل إلى المحتوى</a>
+  <header class="header">
+    <a class="brand" href="#overview" aria-label="FlowTwin AI home"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span dir="ltr">flowtwin<span class="brand-ai">AI</span><small>URBAN MOBILITY INTELLIGENCE</small></span></a>
+    <nav class="navigation" aria-label="التنقل الرئيسي">
+      <a class="nav-link active" href="#overview" data-page="overview" data-i18n="navOverview">مختبر الحركة</a>
+      <a class="nav-link" href="#ecotwin" data-page="ecotwin">EcoTwin</a>
+      <a class="nav-link" href="#safecross" data-page="safecross">SafeCross</a>
+      <a class="nav-link" href="#system" data-page="system" data-i18n="navSystem">كيف يعمل</a>
+      <a class="nav-link" href="#roadmap" data-page="roadmap" data-i18n="navRoadmap">خطة التنفيذ</a>
+    </nav>
+    <div class="header-tools"><button id="language" class="language" aria-label="Switch to English">EN <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section id="overview" class="page active-page" aria-labelledby="hero-title">
+      <div class="intro">
+        <div class="intro-copy"><div class="eyebrow"><span class="tiny-line"></span><span data-i18n="eyebrow">نرى الحركة. نستبق الازدحام.</span></div><h1 id="hero-title" data-i18n-html="hero">مدينة تتحرك.<br><span>بقرار أذكى.</span></h1><p data-i18n="heroCopy">توأم رقمي يختبر القرار قبل أن يصل إلى الطريق.<br>استكشف كيف تتحول بيانات التقاطع إلى حركة أكثر انسيابية.</p></div>
+        <div class="intro-aside"><div class="prototype"><span class="status-dot"></span><span data-i18n="prototype">نموذج تفاعلي توضيحي</span><span class="mono">V.04</span></div><div class="intro-coordinate" dir="ltr"><span>ONE INTERSECTION.</span><span>THOUSANDS OF POSSIBILITIES.</span></div><p data-i18n="honesty">بيانات افتراضية لشرح الفكرة. لا يوجد اتصال بكاميرات حقيقية أو بمحرك SUMO.</p><a href="#system" class="text-link"><span data-i18n="exploreSystem">استكشف بنية النظام</span> <span aria-hidden="true">↙</span></a></div>
+      </div>
+      <div class="workspace-heading"><h2><span class="section-index mono">01 /</span> <span data-i18n="labTitle">التقاطع تحت المجهر</span></h2><span class="quiet mono" data-i18n="simulationLabel">INTERSECTION A · DEMO ENVIRONMENT</span></div>
+      <div class="workspace">
+        <aside class="scenario-panel">
+          <div class="panel-heading"><span data-i18n="scenarioTitle">اختر مشهد التجربة</span><span class="mono quiet">03</span></div>
+          <div class="scenario-buttons" role="group" aria-label="Demo scenarios">
+            <button class="scenario selected" data-scenario="congestion" aria-pressed="true"><span class="scenario-symbol" aria-hidden="true">≋</span><span><strong data-i18n="congestion">ازدحام مفاجئ</strong><small data-i18n="congestionSub">حين يرتفع الطلب على التقاطع</small></span><span class="scenario-number mono">01</span></button>
+            <button class="scenario" data-scenario="ambulance" aria-pressed="false"><span class="scenario-symbol cross" aria-hidden="true">+</span><span><strong data-i18n="ambulance">أولوية الإسعاف</strong><small data-i18n="ambulanceSub">إفساح الطريق بأمان</small></span><span class="scenario-number mono">02</span></button>
+            <button class="scenario" data-scenario="offline" aria-pressed="false"><span class="scenario-symbol" aria-hidden="true">⌁</span><span><strong data-i18n="offline">انقطاع الاتصال</strong><small data-i18n="offlineSub">استمرار القرار محليًا</small></span><span class="scenario-number mono">03</span></button>
+          </div>
+          <div class="demand-control"><div><label for="demand" data-i18n="demand">كثافة الحركة</label><output for="demand" id="demand-value" class="mono">70%</output></div><input id="demand" type="range" min="30" max="100" value="70" step="5"><div class="range-labels"><span data-i18n="light">منخفضة</span><span data-i18n="heavy">مرتفعة</span></div></div>
+          <div class="scenario-description"><span class="micro-label" data-i18n="whatHappens">ماذا سيحدث؟</span><p id="scenario-description"></p></div>
+          <button id="run" class="primary-button"><span id="run-label" data-i18n="run">تشغيل السيناريو</span><span id="run-icon" aria-hidden="true">↗</span></button>
+          <div class="run-bottom"><span id="run-status" data-i18n="ready">جاهز للتجربة</span><button id="reset" class="reset" data-i18n="reset">إعادة ضبط ↺</button></div>
+        </aside>
+        <div class="twin-panel">
+          <div class="twin-toolbar"><div class="twin-title"><span class="status-dot"></span><strong data-i18n="digitalTwin">التوأم الرقمي</strong><span class="mono map-id">FT—001</span></div><div class="segmented" role="group" aria-label="Control strategy"><button data-mode="optimized" class="active" aria-pressed="true" data-i18n="optimized">التحكم الذكي</button><button data-mode="baseline" aria-pressed="false" data-i18n="baseline">التوقيت الثابت</button></div></div>
+          <div class="map-wrap"><svg id="map" viewBox="0 0 900 530" role="img" aria-labelledby="map-title map-desc"><title id="map-title">Illustrative digital twin intersection</title><desc id="map-desc">An animated four-way intersection with vehicle queues, signal indicators and a highlighted traffic path.</desc></svg><div class="map-corner"><span class="crosshair">⌖</span><span class="mono">MODEL SPACE<br>SCHEMATIC</span></div><div class="map-north" aria-hidden="true">N<span>↑</span></div></div>
+          <div class="map-footer"><div class="map-legend"><span><i class="legend-dot mint"></i><span data-i18n="flow">حركة المركبات</span></span><span><i class="legend-dot amber"></i><span data-i18n="queue">منطقة انتظار</span></span><span><i class="legend-line"></i><span data-i18n="recommended">المسار المقترح</span></span></div><button id="motion" class="icon-button" aria-pressed="false" data-i18n="pauseMotion">إيقاف الحركة Ⅱ</button></div>
+        </div>
+      </div>
+      <div class="metrics"><div class="metric"><div class="metric-label" data-i18n="waitTime">متوسط زمن الانتظار</div><div class="metric-value"><b id="wait-value" class="mono">—</b><span data-i18n="seconds">ثانية</span><span id="wait-change" class="metric-change mono">—</span></div><div class="metric-foot"><span data-i18n="vsBaseline">مقابل التوقيت الثابت</span><span id="wait-base" class="mono">—</span></div></div><div class="metric"><div class="metric-label" data-i18n="queueLength">طول طابور الانتظار</div><div class="metric-value"><b id="queue-value" class="mono">—</b><span data-i18n="vehicles">مركبة</span><span class="metric-spark" aria-hidden="true">▁▂▄▅▃▂▁</span></div><div class="metric-foot"><span data-i18n="northApproach">المسار الشمالي</span><span class="quiet" data-i18n="illustrative">قيمة توضيحية</span></div></div><div class="metric"><div class="metric-label" data-i18n="emergencyTime">زمن عبور الطوارئ</div><div class="metric-value"><b id="emergency-value" class="mono">—</b><span data-i18n="seconds">ثانية</span><span class="metric-change mono" id="emergency-change">—</span></div><div class="metric-foot"><span data-i18n="priority">أولوية آمنة</span><span class="quiet" data-i18n="illustrative">قيمة توضيحية</span></div></div><div class="metric"><div class="metric-label" data-i18n="edgeState">حالة المعالجة الطرفية</div><div class="metric-value edge-value"><span class="status-dot"></span><b id="edge-value" data-i18n="localActive">تعمل محليًا</b></div><div class="metric-foot"><span id="cloud-status" data-i18n="cloudConnected">اتصال سحابي افتراضي</span><span class="mono">EDGE / 01</span></div></div></div>
+      <div class="insights-row"><section class="comparison-panel"><div class="panel-heading"><h3 id="comparison-title">ما الفرق الفعلي في هذه التجربة؟</h3><span class="mini-tag" id="comparison-context">نتائج التجربة الحالية</span></div><p id="comparison-metric"></p><div class="bar-row"><span data-i18n="baseline">التوقيت الثابت</span><div class="bar-track"><i id="baseline-bar" class="bar baseline-bar"></i></div><b id="baseline-label" class="mono">—</b></div><div class="bar-row"><span data-i18n="optimized">التحكم الذكي</span><div class="bar-track"><i id="optimized-bar" class="bar optimized-bar"></i></div><b id="optimized-label" class="mono">—</b></div><div id="comparison-summary"></div><div id="comparison-outcomes"></div><p id="comparison-method" class="chart-caption"></p></section></div>
+      <details class="methodology"><summary><span data-i18n="methodTitle">ما الذي تعرضه هذه التجربة؟</span><span aria-hidden="true">+</span></summary><p data-i18n="methodBody">هذه واجهة تفاعلية لشرح تجربة FlowTwin AI المقترحة، وليست نتائج قياس ميداني. الحركة والأرقام مبنية على نموذج توضيحي داخل المتصفح. يتطلب إثبات الأثر ربط YOLO وByteTrack وSUMO وMQTT، ثم المقارنة بخط أساس ثابت عبر 10 بذور عشوائية على الأقل و3 أنماط طلب، مع توثيق فواصل الثقة.</p></details>
+    </section>
+    <section id="safecross" class="page" aria-label="SafeCross" hidden></section>
+    <section id="system" class="page" aria-labelledby="system-title" hidden></section>
+    <section id="roadmap" class="page" aria-labelledby="roadmap-title" hidden></section>
+  </main>
+  <footer class="footer"><div class="footer-brand" dir="ltr">flowtwin<span>AI</span><small>BUILT FOR BETTER MOVEMENT.</small></div><p data-i18n="footer">من مراقبة الازدحام إلى استباقه.</p><span class="footer-end mono">FLOWTWIN / INTERACTIVE LAB</span></footer>
+</body>
+</html>
+

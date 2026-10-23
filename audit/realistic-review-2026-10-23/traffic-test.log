@@ -1,0 +1,19 @@
+congestion/baseline/30: 96 crossed; no overlap or red-light entry
+congestion/baseline/70: 162 crossed; no overlap or red-light entry
+congestion/baseline/100: 190 crossed; no overlap or red-light entry
+congestion/optimized/30: 92 crossed; no overlap or red-light entry
+congestion/optimized/70: 163 crossed; no overlap or red-light entry
+congestion/optimized/100: 208 crossed; no overlap or red-light entry
+ambulance/baseline/30: 87 crossed; no overlap or red-light entry
+ambulance/baseline/70: 160 crossed; no overlap or red-light entry
+ambulance/baseline/100: 184 crossed; no overlap or red-light entry
+ambulance/optimized/30: 90 crossed; no overlap or red-light entry
+ambulance/optimized/70: 168 crossed; no overlap or red-light entry
+ambulance/optimized/100: 193 crossed; no overlap or red-light entry
+offline/baseline/30: 86 crossed; no overlap or red-light entry
+offline/baseline/70: 157 crossed; no overlap or red-light entry
+offline/baseline/100: 182 crossed; no overlap or red-light entry
+offline/optimized/30: 86 crossed; no overlap or red-light entry
+offline/optimized/70: 167 crossed; no overlap or red-light entry
+offline/optimized/100: 192 crossed; no overlap or red-light entry
+PASS: 64800 state checks, deterministic replay, live strategy changes.

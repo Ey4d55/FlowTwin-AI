@@ -1,0 +1,6 @@
+.sites-local/
+*.tar.gz
+*.tar
+node_modules/
+qa/
+audit/generated/
