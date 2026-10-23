@@ -1,0 +1,38 @@
+{
+  "url": "https://flowtwin-naklthon-lab.woodsy-curry-9308.chatgpt.site/",
+  "card_pixels": [
+    2400,
+    3200
+  ],
+  "print_dpi": 300,
+  "correction": "H",
+  "quiet_zone_modules": 6,
+  "qr_version": 7,
+  "checks": [
+    {
+      "case": "card-original",
+      "decoded": "https://flowtwin-naklthon-lab.woodsy-curry-9308.chatgpt.site/",
+      "passed": true
+    },
+    {
+      "case": "card-600x800",
+      "decoded": "https://flowtwin-naklthon-lab.woodsy-curry-9308.chatgpt.site/",
+      "passed": true
+    },
+    {
+      "case": "card-jpeg-quality-70",
+      "decoded": "https://flowtwin-naklthon-lab.woodsy-curry-9308.chatgpt.site/",
+      "passed": true
+    },
+    {
+      "case": "qr-300x300",
+      "decoded": "https://flowtwin-naklthon-lab.woodsy-curry-9308.chatgpt.site/",
+      "passed": true
+    },
+    {
+      "case": "card-rotated",
+      "decoded": "https://flowtwin-naklthon-lab.woodsy-curry-9308.chatgpt.site/",
+      "passed": true
+    }
+  ]
+}

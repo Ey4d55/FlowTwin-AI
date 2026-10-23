@@ -1,6 +1,6 @@
 # Recorded validation
 
-`realistic-review-2026-10-23/` contains the 180 paired traffic runs (648,000 checked states), outputs at 60/120/180 seconds, source hashes from that review, and the traffic/SafeCross test logs. The traffic and SafeCross engines are unchanged in the latest UI update.
+`realistic-review-2026-10-23/` contains 180 traffic runs in 90 fixed/adaptive pairs (648,000 checked states), outputs at 60/120/180 seconds, source hashes from that review, and the traffic/SafeCross test logs. The traffic and SafeCross engines are unchanged in the latest UI update.
 
 `results-explained-2026-10-23/` contains the latest source hashes, captured browser text for three scenarios, and screenshots of the revised decision costs and outcome comparison. Interface source hashes supersede the earlier interface hashes; engine hashes still match.
 

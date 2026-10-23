@@ -41,3 +41,7 @@ Review evidence is included in `audit/realistic-review-2026-10-23/`, with the la
 ## Scope
 
 This is an executable browser experiment with synthetic inputs. Camera/edge detection, trained congestion prediction, SUMO, physical signals/ESP32, calibrated emissions, actual network/cloud synchronization and multi-vehicle SafeCross integration are not connected. Cloud-outage scene and imported observation fields are model inputs, not field validation. Architecture/roadmap pages describe the intended deployment pipeline.
+
+## QR artwork
+
+Branded PNG/SVG artwork and decoding checks are in [branding/](branding/README.md). The QR uses the current hosted platform URL. It does not point to the local preview or the GitHub source repository.
